@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Post extends Model
@@ -26,8 +27,13 @@ class Post extends Model
         return $this->belongsTo(related: User::class);
     }
 
-    public function categeories(): BelongsToMany
+    public function categories(): BelongsToMany
     {
         return $this->belongsToMany(related: Category::class);
+    }
+
+    public function  shortBody(): string
+    {
+        return Str::words(strip_tags($this->body), 30);
     }
 }

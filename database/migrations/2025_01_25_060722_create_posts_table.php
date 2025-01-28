@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string(column: 'title', length: 2048);
             $table->string(column: 'slug', length: 2048);
             $table->string(column: 'thumbnail', length: 2048)->nullable();
-            $table->string(column: 'body');
+            $table->longText(column: 'body');
             $table->boolean(column: 'active');
             $table->datetime(column: 'published_at');
             $table->foreignIdFor(
