@@ -16,7 +16,7 @@
         <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">
             {{ $post->title }}
         </a>
-        <p href="#" class="text-sm pb-3">
+        <p href="#" class="text-sm pb-3 font-">
             By <a href="#" class="font-semibold hover:text-gray-800">
                 {{ $post->user->name }}
             </a>, Published on {{ $post->getFormattedDate() }}

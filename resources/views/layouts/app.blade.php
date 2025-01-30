@@ -8,6 +8,7 @@
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
 
+    @vite('/resources/css/app.css')
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
